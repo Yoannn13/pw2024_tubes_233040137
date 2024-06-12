@@ -88,9 +88,9 @@
       </ol>
     </nav>
     <?php if (isset($_SESSION['username'])) { ?>
-      <h2>Halo <?php echo $_SESSION['username']; ?>, Selamat Datang Di Dasboard Admin</h2>
+      <h2>Halo <?php echo $_SESSION['username']; ?>, Selamat Datang Di Halaman Admin</h2>
     <?php } else { ?>
-      <h2>Selamat Datang Di Dasboard Admin</h2>
+      <h2>Selamat Datang Di Halaman Admin</h2>
     <?php } ?>
 
     <div class="container mt-5">

@@ -226,10 +226,12 @@ $teams = mysqli_query($conn, $query);
         <!-- Bagian Pencarian -->
 <div class="mb-3">
     <form action="" method="get" class="form-inline">
-        <div class="form-group">
+        <div class="form-group col-md-10">
             <input type="text" name="search" class="form-control mr-2" placeholder="Cari...">
         </div>
+        <div class="col-md-2">
         <button type="submit" class="btn btn-primary">Cari</button>
+        </div>
     </form>
 </div>
 
