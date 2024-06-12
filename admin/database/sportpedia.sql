@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 09, 2024 at 12:15 PM
+-- Generation Time: Jun 12, 2024 at 12:48 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -38,7 +38,8 @@ CREATE TABLE `kategori` (
 
 INSERT INTO `kategori` (`id`, `nama`) VALUES
 (1, 'Sepak Bola'),
-(2, 'Basket');
+(2, 'Basket'),
+(3, 'voly');
 
 -- --------------------------------------------------------
 
@@ -63,8 +64,24 @@ CREATE TABLE `team` (
 --
 
 INSERT INTO `team` (`id`, `kategori_id`, `nama`, `kotaAsal`, `negara`, `stadion`, `tahunDidirikan`, `pelatih`, `gambar`) VALUES
-(2, 1, 'Barcelona', 'asdawdas', 'awdasdaw', 'asdawdas', 123, 'asdas', '5v6hS7fOEYrWGTG.jpg'),
-(3, 2, 'Lakers', 'asdasd', 'asdasd', 'asd', 1233, 'asdasd', 'PZqWb2iAKKkE7zA.jpg');
+(2, 1, 'Barcelona', 'Bacrelona', 'Spanyol', 'Campnou', 1990, 'Hansi Flick', 'e2oGQ2zTUf.png'),
+(7, 1, 'Manchester United', 'Manchester', 'Inggris', 'Old Trafford', 1878, 'Erik Ten Hag', '88u5IOmrZj.png'),
+(8, 1, 'Real Madrid', 'Madrid', 'Spanyol', 'Santiago Bernabeu', 1902, 'Carlo Ancelotti', 'YnIHwVbdTMPj7VU.jpg'),
+(9, 1, 'Manchester City', 'Manchester', 'Inggirs', 'Etihad Stadion', 1988, 'Pep Guardiola', 'E5IZXthNrWvrASc.png'),
+(10, 1, 'Arsenal', 'London', 'Inggirs', 'Emirates', 1886, 'Mikel Arteta', 'cys4CtZHcPX6zA2.png'),
+(11, 1, 'Chelsea', 'London', 'Inggris', 'Stamford Bridge', 1905, 'Enzo Maresca', 'pX2Tm76LZyWhVcP.png'),
+(12, 1, 'Bayern Munchen', 'Munich', 'German', 'Allianz Arena', 1900, 'Vincent Kompany', 'iJjSLYzrNFtTf1T.png'),
+(13, 1, 'Borussia Dortmund', 'Dortmund', 'German', 'Signal Iduna Park', 1909, 'Edin Terzic', 'x2BVK1KlYobGbD8.png'),
+(14, 1, 'Bayer 04 Leverkusen', 'Leverkusen', 'German', 'Bay Arena', 1904, 'Xabi Alonso', 'jPDQmSEFawva5UR.png'),
+(15, 1, 'Tottenham Hotspur', 'London', 'Inggris', 'Tottenham Hotspur Stadion', 1882, 'Ange Postecoglou', 'TBtL1hIFbGFPBVZ.png'),
+(16, 1, 'Aston Villa', 'Birmingham', 'Inggris', 'Villa Park', 1874, 'Unai Emery', 'ffgqNa9mECLIQqX.png'),
+(17, 1, 'Newcastle United', 'Newcastle upon tyne', 'Inggris', 'St James Park', 1892, 'Eddie Howe', '6h9uLTajL2yU437.png'),
+(18, 1, 'AC Milan', 'Milan', 'Italia', 'San Siro Stadion', 1899, 'Stefano Pioli', 'O65EeT7LBpLHMvh.png'),
+(19, 1, 'Internazionale Milan', 'Milan', 'Italia', 'San Siro Stadion', 1908, 'Simeone Inzaghi', '316cggPKltDErmK.png'),
+(20, 1, 'Juventus', 'Turin', 'Italia', 'Juventus Stadion', 1897, 'Paolo Montero', 'qmggAbsFeN0EDba.png'),
+(21, 1, 'Olympique Lyonnais', 'Chauses', 'Prancis', 'Groupama Stadion', 1950, 'Pierre Sage', 'RW6T0pFX5Qy2jpJ.png'),
+(22, 1, 'Paris Saint Germain', 'Paris', 'Prancis', 'Parc des Princes', 1970, 'Luis Enrique', 'KsPmXzfMJuK6c1x.png'),
+(23, 1, 'Olympique de Marseille', 'Marseille', 'Prancis', 'Vélodrome Stadion', 1899, 'Jean-Louis Gasset', 't1jUvwXywgUQYkt.png');
 
 -- --------------------------------------------------------
 
@@ -84,7 +101,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
-(1, 'admin', '$2y$10$yxeRdxAWozJ4wdkyxFLTiOeaLfgHUWzpJLQF5snTtnnOzdy/RdFwa', 'admin');
+(1, 'admin', '$2y$10$yxeRdxAWozJ4wdkyxFLTiOeaLfgHUWzpJLQF5snTtnnOzdy/RdFwa', 'admin'),
+(2, 'yoman', '$2y$10$hWvZl0XoVHgUm0FE5OYrlOY9f0ORIVHz3579Kk.DJkyiBeIq5sEO.', 'user'),
+(3, 'jambang', '$2y$10$ZrkvLefaODcvF6Fbxhy4g.lcI0nIS9tev022mdVsZz7q71bt68KUS', 'user'),
+(4, 'yo', '$2y$10$FWxHZcKVHDdrHc69spqQG.owYGW3h8loyx2xbQSB7zZCCCL6mifIO', 'user');
 
 --
 -- Indexes for dumped tables
@@ -118,19 +138,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `team`
 --
 ALTER TABLE `team`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
